@@ -21,6 +21,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="{% static 'cloneproject/css/style.css' %}"> -->
 </head>
 
 <body>
@@ -31,7 +33,8 @@
 
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'posts:create' %}" class="btn btn-simple">Post</a></li>
+                <li><a href="{% url 'posts:all' %}" class="btn btn-simple">Post</a></li>
+                <li><a href="{% url 'posts:create' %}" class="btn btn-simple">Create Post</a></li>
                 <li><a href="{% url 'groups:all' %}" class="btn btn-simple">Groups</a></li>
                 <li><a href="{% url 'groups:create' %}" class="btn btn-simple">Create Group</a></li>
                 <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple">Log out</a></li>
